@@ -19,24 +19,12 @@ public final class Moto extends Avto {
     }
 
     @Override
-    public String printInfo(String name) {
-        return super.printInfo(name) + " Baiker: " + getBaiker() + " Speed: " + getSpeed();
+    public String printInfo() {
+        return super.printInfo() + " Baiker: " + getBaiker() + " Speed: " + getSpeed();
     }
 
-    public void printSound(String sound) {
-        System.out.println(sound);
-    }
-
-    public void printSound(String sound, int i) {
-        for (int j = 0; j < i; j++) {
-            System.out.println(sound);
-        }
-    }
-
-    public void printSound(int j, String sound) {
-        for (int i = 0; i < j; i++) {
-            System.out.println(sound);
-
-        }
+    @Override
+    public String printSound(String sound) {
+        return super.printSound(sound);
     }
 }
