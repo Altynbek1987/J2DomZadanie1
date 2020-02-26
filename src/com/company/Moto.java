@@ -4,8 +4,8 @@ public final class Moto extends Avto {
     private String baiker;
     private int speed;
 
-    public Moto(String model, Color color, Double volume, String baiker, int speed) {
-        super(model, color, volume);
+    public Moto(String model, Color color, Double volume, Plant plant, String baiker, int speed) {
+        super(model, color, volume, plant);
         this.baiker = baiker;
         this.speed = speed;
     }
@@ -20,6 +20,23 @@ public final class Moto extends Avto {
 
     @Override
     public String printInfo(String name) {
-    return super.printInfo(name)+" Baiker: " + getBaiker() + " Speed: " + getSpeed();
+        return super.printInfo(name) + " Baiker: " + getBaiker() + " Speed: " + getSpeed();
+    }
+
+    public void printSound(String sound) {
+        System.out.println(sound);
+    }
+
+    public void printSound(String sound, int i) {
+        for (int j = 0; j < i; j++) {
+            System.out.println(sound);
+        }
+    }
+
+    public void printSound(int j, String sound) {
+        for (int i = 0; i < j; i++) {
+            System.out.println(sound);
+
+        }
     }
 }
